@@ -9,7 +9,7 @@
       <form>
         <div class="form-group">
           <label for="burger">Burger Kind</label>
-          <input type="text" class="form-control" id="product">
+          <input type="text" class="form-control" id="burger">
         </div>
         <button type="submit" id="addBurger" class="btn btn-primary">Add Burger to List</button>
       </form>
@@ -22,7 +22,6 @@
         <h2>Not Devoured</h2>
         {{#each burger}}
         {{#unless this.devoured}}
-
         <li id="{{ this.id }}" class="list-group-item">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{ this.name }}</h5>
@@ -39,17 +38,15 @@
       <ul id="devoured" class="list-group">
         <h2>Devoured</h2>
         {{#each burger}}
-        {{#if this.devoured}
-
-
+        {{#if this.devoured}}
         <li id="{{ this.id }}" class="list-group-item">
           <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">{{ this.name }}</h5>
+            <h5 class="mb-1"> {{ this.name }}</h5>
             <button class="btn btn-danger remove">X</button>
           </div>
         </li>
-        {{/if}}
-        {{/each}}
+         {{/if}}
+        {{/each}}  
       </ul>
     </div>
   </div>
