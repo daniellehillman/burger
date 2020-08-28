@@ -14,7 +14,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
            <h5 class="mb-1">${document.getElementById('burger').value}</h5>
            <button 
             data-name="${document.getElementById('burger').value}"
-            class="devour btn btn-success">✓</button>
+            class="devour btn btn-success">Devour</button>
          </div>
         `
         document.getElementById('notDevoured').append(burgerElem)
@@ -35,7 +35,7 @@ document.getElementById('addBurger').addEventListener('click', event => {
           groceryElem.innerHTML = `
          <div class="d-flex w-100 justify-content-between">
            <h5 class="mb-1">${event.target.dataset.name}</h5>
-           <button class="btn btn-danger remove">X</button>
+           <button class="btn btn-danger remove">Delete</button>
          </div>
         `
           document.getElementById('devoured').append(groceryElem)
